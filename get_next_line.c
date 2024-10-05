@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurmish <ldurmish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ledio <ledio@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 12:45:58 by ldurmish          #+#    #+#             */
-/*   Updated: 2024/08/14 19:02:38 by ldurmish         ###   ########.fr       */
+/*   Updated: 2024/10/06 00:29:38 by ledio            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,11 +128,11 @@ char	*get_next_line(int fd)
 		ft_clear_list(&head, NULL, NULL, 0);
 		return (NULL);
 	}
-	read_status = ft_read_list(fd, &head[fd]);
+	read_status = ft_read_list(fd, &head);
 	if (read_status < 0 || (head == NULL && read_status == 0))
-		return (ft_clear_list(&head[fd], NULL, NULL, 0), NULL);
+		return (ft_clear_list(&head, NULL, NULL, 0), NULL);
 	line = ft_get_line_from_list(&head, head);
 	if (line != NULL && line[0] == '\0' && read_status == 0)
-		return (free(line), ft_clear_list(&head[fd], NULL, NULL, 0), NULL);
+		return (free(line), ft_clear_list(&head, NULL, NULL, 0), NULL);
 	return (line);
 }
