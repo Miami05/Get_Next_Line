@@ -76,8 +76,6 @@ Here’s a simple example to demonstrate `get_next_line`:
 
 ```
 #include "get_next_line.h"
-#include <fcntl.h>
-#include <stdio.h>
 
 int main(void)
 {
@@ -98,6 +96,17 @@ int main(void)
     close(fd);
     return (0);
 }
+```
+
+## Compiling
+
+### Mandatory part
+```
+gcc -Wall -Wextra -Werror -I include get_next_line.c get_next_line_utils.c main.c
+```
+### Bonus part
+```
+gcc -Wall -Wextra -Werror -I include get_next_line_bonus.c get_next_line_utils_bonus.c main.c
 ```
 
 ## License

@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/ledio/Desktop/Get_Next_Line",
-      "program": "/home/ledio/Desktop/Get_Next_Line/build/Debug/outDebug",
+      "cwd": "/home/ledio/Get_Next_Line",
+      "program": "/home/ledio/Get_Next_Line/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
